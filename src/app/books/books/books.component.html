@@ -1,17 +1,24 @@
+<div>
+  <h1  class="titulo">All books</h1>
+</div>
 
 <div class="container"  >
+  <div class="books-container">
+    <div  *ngFor="let book of books">
     <div class="card" >
         <div >
-            <img class="imagen"src={{thumbnail}}>
+            <img class="imagen"src={{book.thumbnail}}>
         </div>
         <div class="card-body">
-          <h4 class="card-price">{{price}}</h4>
+          <h4 class="card-price">{{book.price}}</h4>
           <div class="card-letter">
-           <h5 class="card-title">{{title}}</h5>
-          <p class="card-text " >{{description}}</p>
-          <h6 class="card-subtitle mb-2 text-muted">{{author}}</h6>
+           <h5 class="card-title">{{book.title}}</h5>
+          <p class="card-text " >{{book.description}}</p>
+          <h6 class="card-subtitle mb-2 text-muted">{{book.author}}</h6>
           <button type="button" class="btn btn-dark" >+   ADD TO CART </button>
         </div>
         </div>
       </div>
+    </div>
+  </div>
 </div>

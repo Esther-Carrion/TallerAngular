@@ -12,26 +12,26 @@ import { ServiceBooksService } from 'src/app/Services/books.service';
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.css']
 })
-export class BodyComponent implements OnInit {
+export class BodyComponent  {
  
   books:Book[]=[];
 
   constructor(private bookService:ServiceBooksService, private store:Store){}
 
-ngOnInit(): void {
-  this.store.select(selectFilteredBooks).subscribe((filteredBooks) => {
-    this.books = filteredBooks;
-  });
+// ngOnInit(): void {
+//   this.store.select(selectFilteredBooks).subscribe((filteredBooks) => {
+//     this.books = filteredBooks;
+//   });
 
-  this.bookService.getAll().subscribe((libro) => {
-    this.store.dispatch(setFilter({ filter: '' })); 
-    this.store.dispatch(applyFilter());
-  });
-}
+//   this.bookService.getAll().subscribe((libro) => {
+//     this.store.dispatch(setFilter({ filter: '' })); 
+//     this.store.dispatch(applyFilter());
+//   });
+// }
 
-onFilterClick(category: string): void {
-  this.store.dispatch(setFilter({ filter: category }));
-  this.store.dispatch(applyFilter());
-}
+// onFilterClick(category: string): void {
+//   this.store.dispatch(setFilter({ filter: category }));
+//   this.store.dispatch(applyFilter());
+// }
 }
 

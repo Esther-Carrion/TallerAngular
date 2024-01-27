@@ -25,7 +25,7 @@ import { FilterEffects } from './Effect/filter.effects';
     HeaderComponent,
     BooksComponent,
     ShoppingComponent,
-    BodyComponent,
+    // BodyComponent,
     ResaltarDirective,
     SummaryComponent,
 

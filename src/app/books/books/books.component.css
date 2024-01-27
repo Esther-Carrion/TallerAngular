@@ -1,4 +1,18 @@
 
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 400px;
+    justify-content: space-around;
+}
+.titulo{
+    padding-left: 215px ;
+    padding-top: 25px ;
+    font-weight: bold;
+    font-size: 32px ;
+}
+
 .container{
     padding-top: 110px;
    
@@ -55,3 +69,4 @@
     top: -90px;
     left: 22px;
 }
+
