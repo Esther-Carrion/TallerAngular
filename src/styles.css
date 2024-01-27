@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    font-family: Lexend;
+}
+body {
+
+    background-color: #E1E0E0; 
+   
+  }

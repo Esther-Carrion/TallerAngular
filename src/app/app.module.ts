@@ -1,16 +1,41 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header/header.component';
+import { BooksComponent } from './books/books/books.component';
+import { ShoppingComponent } from './shopping/shopping/shopping.component';
+import { BodyComponent } from './Body/body/body.component';
+import { ResaltarDirective } from './Directive/resaltar.directive';
+import { SummaryComponent } from './Summary/summary/summary.component';
+
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+
+import { filter } from 'rxjs';
+import { filterReducer } from './Reducer/filter.reducer';
+import { FilterEffects } from './Effect/filter.effects';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    BooksComponent,
+    ShoppingComponent,
+    BodyComponent,
+    ResaltarDirective,
+    SummaryComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    StoreModule.forRoot({filter: filterReducer}),
+    EffectsModule.forRoot([FilterEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]

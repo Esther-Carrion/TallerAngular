@@ -1,0 +1,27 @@
+
+
+.titulo{
+    padding-left: 215px ;
+    padding-top: 25px ;
+    font-weight: bold;
+    font-size: 32px ;
+}
+
+/* .container_column {
+
+
+    display: flex;
+    flex-direction: row;
+}
+.container_row{
+    display: flex;
+    flex-direction: row;
+} */
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 400px;
+    justify-content: space-around;
+}

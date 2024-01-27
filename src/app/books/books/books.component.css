@@ -1,0 +1,57 @@
+
+.container{
+    padding-top: 110px;
+   
+}
+
+.card{
+  
+    width: 296px ;
+    height: 367px;
+   border-radius: 10px;
+  position: absolute;
+}
+.card-body{
+    position: absolute;
+    
+}
+
+.card-price{
+    padding-left: 65%;
+    font-size: 26px;
+    font-weight: 600;
+}
+.card-title{
+    font-weight: 550;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.card-text{
+    font-size: 16px;
+    font-weight: 300;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.card-subtitle.mb-2.text-muted{
+    font-size: 16px;
+    padding: 5px;
+}
+
+.btn.btn-dark{
+    width: 247px ;
+}
+.card-letter{
+
+    padding-top: 50px;
+}
+.imagen{
+    width: 140px;
+    height: 173px;
+    border-radius: 10px;
+    position: relative;
+    top: -90px;
+    left: 22px;
+}
