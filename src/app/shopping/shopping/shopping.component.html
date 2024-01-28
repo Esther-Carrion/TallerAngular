@@ -13,11 +13,11 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let item of books" >
         
-        <td ><img class="imagen" src="https://images.cdn1.buscalibre.com/fit-in/360x360/66/1a/661a3760157941a94cb8db3f5a9d5060.jpg"  ></td>
+        <td ><img class="imagen" src="{{item.thumbnail}}"  ></td>
         
-        <td class="table-fit col-2" >Essential Cryptography for JavaScript Developers
+        <td class="table-fit col-2" >{{item.title}}
           <div class="container-remove">
           <a  class="btn btn-default" type="button">Remove</a>
         </div>
@@ -28,7 +28,10 @@
             <i class="fas fa-minus"></i> 
           </a> 
           <div class="quantity">
-          <input type="text" style="text-align: center;" class="form-control">   
+          <input type="text" style="text-align: center;" class="form-control"
+          min="1"
+          
+          >   
         </div>    
           <a type="button">
             <i class="fas fa-plus"></i>
@@ -37,7 +40,7 @@
         </td >  
         <td  class="table-fit col-2">
           <div class="elements-container" style="padding-left: 50px;">
-          Otto
+          {{item.price}}
         </div>
       </td>
         <td  class="table-fit col-2">

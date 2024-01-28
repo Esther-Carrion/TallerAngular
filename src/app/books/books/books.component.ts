@@ -40,6 +40,13 @@ export class BooksComponent implements OnInit {
    }
 
  
-  
+   agregarCarrito(book:Book){
+    this.bookService.addItem(book).subscribe(
+      (response) => {
+        // Puedes manejar la respuesta del servidor si es necesario
+        console.log('Libro agregado al carrito:', response);
+      }
+    )
+   }
 
 }

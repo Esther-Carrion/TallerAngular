@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { BooksComponent } from './books/books/books.component';
 import { ShoppingComponent } from './shopping/shopping/shopping.component';
-import { BodyComponent } from './Body/body/body.component';
 import { ResaltarDirective } from './Directive/resaltar.directive';
 import { SummaryComponent } from './Summary/summary/summary.component';
 
@@ -25,7 +24,7 @@ import { FilterEffects } from './Effect/filter.effects';
     HeaderComponent,
     BooksComponent,
     ShoppingComponent,
-    // BodyComponent,
+
     ResaltarDirective,
     SummaryComponent,
 

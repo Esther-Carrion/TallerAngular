@@ -1,11 +1,4 @@
 
-.books-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    column-gap: 20px;
-    row-gap: 400px;
-    justify-content: space-around;
-}
 .titulo{
     padding-left: 215px ;
     padding-top: 25px ;
@@ -70,3 +63,11 @@
     left: 22px;
 }
 
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 525px;
+    justify-content: space-around;
+}

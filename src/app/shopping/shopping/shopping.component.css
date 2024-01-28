@@ -59,14 +59,21 @@
 }
 
 .continue-shopping{
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
   left: 0;
   margin: 80px;
   font-weight: bold;
   display: flex;
+  align-items: center; */
+  margin-top: auto; /* Empuja el elemento hacia la parte inferior */
+  font-weight: bold;
+  display: flex;
   align-items: center;
- 
+  padding-top: 700px;
+  margin-left: -700px;
+  
+  
 }
 
 

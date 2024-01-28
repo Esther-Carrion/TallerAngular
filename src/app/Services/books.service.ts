@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Book } from '../Interfaces/interface-book';
+import { Book, Item } from '../Interfaces/interface-book';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,9 +9,10 @@ import { Observable } from 'rxjs';
 export class ServiceBooksService {
 
   book!:Book;
+  items!:Item;
 
   private url="api/books"
-  private urlAdd="api/cart"
+  private urlCart="api/cart"
 
   constructor(private http:HttpClient) { }
 
@@ -20,8 +21,13 @@ export class ServiceBooksService {
     return this.http.get<Book[]>(this.url)
   }
 
+  getCarrito():Observable<Book[]>{
+    return this.http.get<Book[]>(this.urlCart);
+  }
+
   addItem(books:Book):Observable<Book>{
-    return this.http.post<Book>(this.urlAdd,books)
+    const { id, ...bookWithoutId } = books;
+    return this.http.post<Book>(this.urlCart,bookWithoutId)
   }
 
 }
