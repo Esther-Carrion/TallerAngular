@@ -2,70 +2,71 @@
 
   <div class="container-table">
 
-  <table class="table ">
-    <thead>
-      <tr class="titulos">
-        <th class="table-fit col-1" scope="col"></th>
-        <th class="table-fit col-1" scope="col"></th>
-        <th class="table-fit col-1"scope="col" >QUANTITY</th>
-        <th class="table-fit col-1" scope="col">PRICE</th>
-        <th class="table-fit col-1" scope="col">TOTAL</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of books" >
-        
-        <td ><img class="imagen" src="{{item.thumbnail}}"  ></td>
-        
-        <td class="table-fit col-2" >{{item.title}}
-          <div class="container-remove">
-          <a  class="btn btn-default" type="button">Remove</a>
-        </div>
-        </td>
-        <td class="table-fit col-2">
-          <div class="elements-container">
-          <a type="button">
-            <i class="fas fa-minus"></i> 
-          </a> 
-          <div class="quantity">
-          <input type="text" style="text-align: center;" class="form-control"
-          min="1"
-          
-          >   
-        </div>    
-          <a type="button">
-            <i class="fas fa-plus"></i>
-          </a>
-        </div>
-        </td >  
-        <td  class="table-fit col-2">
-          <div class="elements-container" style="padding-left: 50px;">
-          {{item.price}}
-        </div>
-      </td>
-        <td  class="table-fit col-2">
-          <div class="elements-container" style="padding-left: 40px;">
-          @mdo
-        </div>
-      </td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="table ">
+      <thead>
+        <tr class="titulos">
+          <th class="table-fit col-1" scope="col"></th>
+          <th class="table-fit col-1" scope="col"></th>
+          <th class="table-fit col-1" scope="col">QUANTITY</th>
+          <th class="table-fit col-1" scope="col">PRICE</th>
+          <th class="table-fit col-1" scope="col">TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of books">
 
-  <div class="continue-shopping">
-    <a type="button">
-      <i class="fas fa-arrow-left" style="margin-right: 20px;"></i>
-    </a>
-  <h5 >Continue Shopping</h5>
-  
-</div>
+          <td><img class="imagen" src="{{item.thumbnail}}"></td>
 
-</div>
-<div class="container-form">
-  <app-summary></app-summary>
-</div>
+          <td class="table-fit col-2">{{item.title}}
+            <div class="container-remove">
+              <a class="btn btn-default" type="button" (click)="remove(item)">Remove</a>
+            </div>
+          </td>
+          <td class="table-fit col-2">
+            <div class="elements-container">
+              <a type="button" (click)="decrementQuantity(item)">
+                <i class="fas fa-minus"></i>
+              </a>
+              <div class="quantity">
+                <input type="text" style="text-align: center;" class="form-control" min="1" [value]="item.quantity"
+                  readonly>
+              </div>
+              <a type="button" (click)="incrementQuantity(item)">
+
+                <i class="fas fa-plus"></i>
+              </a>
+            </div>
+          </td>
+          <td class="table-fit col-2">
+            <div class="elements-container" style="padding-left: 50px;">
+              {{item.price}}
+            </div>
+          </td>
+          <td class="table-fit col-2">
+            <div class="elements-container" style="padding-left: 40px;">
+              {{ (item.quantity * item.price).toFixed(2) }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="continue-shopping">
+      <button type="button" [routerLink]="['']">
+        <i class="fas fa-arrow-left" style="margin-right: 20px;"></i>
+        Continue Shopping
+      </button>
 
 
- 
+    </div>
+
+  </div>
+  <div class="container-form">
+    <app-summary [subtotal]="subtotal" [shipping]="shipping" [discount]="discount"></app-summary>
+
+  </div>
+
+
+
 
 </div>

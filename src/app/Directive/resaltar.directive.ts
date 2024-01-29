@@ -5,10 +5,10 @@ import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
 })
 export class ResaltarDirective {
 
-  constructor( private elementRef:ElementRef, private  renderer:Renderer2) { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
 
-  @HostListener('click') onClick(){
+  @HostListener('click') onClick() {
     this.quitarResaltado();
     this.resaltar();
   }
@@ -21,9 +21,9 @@ export class ResaltarDirective {
     });
   }
 
-  private resaltar(){
-    this.renderer.setStyle(this.elementRef.nativeElement,'text-decoration', 'underline')
-    this.renderer.setStyle(this.elementRef.nativeElement,'font-weight', 'bold')
+  private resaltar() {
+    this.renderer.setStyle(this.elementRef.nativeElement, 'text-decoration', 'underline')
+    this.renderer.setStyle(this.elementRef.nativeElement, 'font-weight', 'bold')
   }
 
 }

@@ -12,7 +12,7 @@ export class FilterEffects {
     private actions$: Actions,
     private store: Store,
     private bookService: ServiceBooksService
-  ) {}
+  ) { }
   applyFilter$ = createEffect(() =>
     this.actions$.pipe(
       ofType(applyFilter),
@@ -26,5 +26,5 @@ export class FilterEffects {
     )
   );
 
- 
+
 }

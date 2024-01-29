@@ -1,50 +1,55 @@
-.container{
+.container {
     padding: 30px 0 60px 43px;
-    color:white
+    color: white
 }
-li{
+
+li {
     background-color: black;
     padding: 5px;
 }
-.factura{
+
+.factura {
     padding: 25px 0 0 0px;
 }
-.order{
-   
+
+.order {
+
     border-top: 2px solid #676767;
     font-size: 20px;
 }
 
-.promo{
+.promo {
     display: flex;
     align-items: center;
     padding-top: 30px;
 }
-.bi.bi-plus-circle{
+
+.bi.bi-plus-circle {
     margin: 0 10px;
     font-size: 20px;
-    
+
 }
 
-.form-control.input-promo{
-    width: 28px; 
+.form-control.input-promo {
+    width: 150px;
     margin-right: 10px;
     background-color: #2D2D2D;
     border-color: #4F4F4F;
-    height: 30px; 
+    height: 30px;
+    color: white;
 }
 
-.checkout{
+.checkout {
     padding: 30px;
 }
 
-.btn.btn-outline-secondary{
-    height: 30px; 
+.btn.btn-outline-secondary {
+    height: 30px;
     color: white;
     line-height: 1;
 }
 
-.boton-checkout{
+.boton-checkout {
 
     border-radius: 5px;
     border-color: white;
@@ -52,4 +57,9 @@ li{
     height: 40px;
 }
 
-
+.boton-remove {
+    position: relative;
+    display: flex;
+    top: -30px;
+    left: 160px;
+}

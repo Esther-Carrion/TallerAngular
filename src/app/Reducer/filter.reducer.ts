@@ -4,12 +4,12 @@ import { Book } from '../Interfaces/interface-book';
 
 export interface FilterState {
   filter: string;
-  books: Book[]; 
+  books: Book[];
 }
 
 export const initialState: FilterState = {
   filter: '',
-  books: [], 
+  books: [],
 };
 
 export const filterReducer = createReducer(
